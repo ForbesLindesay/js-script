@@ -1,0 +1,19 @@
+{
+  "name": "js-script",
+  "version": "0.0.0",
+  "description": "Allow asynchronous APIs to be scripted using pure synchronous JavaScript",
+  "keywords": [],
+  "dependencies": {
+    "promise": "~3.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node test/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ForbesLindesay/js-script.git"
+  },
+  "author": "ForbesLindesay",
+  "license": "MIT"
+}
