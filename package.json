@@ -1,6 +1,6 @@
 {
   "name": "js-script",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Allow asynchronous APIs to be scripted using pure synchronous JavaScript",
   "keywords": [],
   "dependencies": {
