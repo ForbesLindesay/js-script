@@ -36,6 +36,35 @@ script(function (block, lazy) {
     assert(ac === 2)
     assert(bc === 2)
     assert(cc === 2)
-    console.log('Tests Passed')
+  })
+  .then(function () {
+    var src = fs.readFileSync(__dirname + '/fixture/err-handler.js', 'utf8')
+
+    var a = {}, b = {}, c = {}
+    var ac = 0, bc = 0, cc = 0
+    return script(function (block, lazy) {
+      return {
+        cache: block(function () {
+          ac++
+          return new Promise(function (resolve, reject) {
+            setTimeout(function () {
+              reject(a)
+            }, 100)
+          })
+        }),
+        server: block(function (callback) {
+          bc++
+          setTimeout(function () {
+            callback(b)
+          }, 100)
+        })
+      }
+    }, src, '/test/fixture/script.js')
+    .then(function (res) {
+      assert(res === 'default')
+      assert(ac === 1)
+      assert(bc === 1)
+      console.log('Tests Passed')
+    })
   })
   .done()
