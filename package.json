@@ -4,7 +4,10 @@
   "description": "Allow asynchronous APIs to be scripted using pure synchronous JavaScript",
   "keywords": [],
   "dependencies": {
-    "promise": "~3.2.0"
+    "promise": "~3.2.0",
+    "falafel": "~0.3.1",
+    "clone": "~0.1.9",
+    "deep-equal": "0.0.0"
   },
   "devDependencies": {},
   "scripts": {

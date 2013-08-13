@@ -1,26 +1,21 @@
 var fs = require('fs')
+var Promise = require('promise')
 var barrage = require('barrage')
 var hyperquest = require('hyperquest')
+var execute = require('../')
 
-function get(url, callback) {
-  return barrage(hyperquest(url)).buffer('buffer', callback)
+function get(url) {
+  return barrage(hyperquest(url)).buffer('buffer')
 }
 function writeFile(path, data, callback) {
-  return fs.writeFile(__dirname + '/' + path, data, callback)
+  return Promise.denodeify(fs.writeFile)(__dirname + '/' + path, data)
 }
 function mkdir(path, callback) {
-  return fs.mkdir(__dirname + '/' + path, callback)
+  return Promise.denodeify(fs.mkdir)(__dirname + '/' + path)
 }
-execute(function (block, lazy) {
-  var csl = {}
-  Object.keys(console)
-    .forEach(function (key) {
-      csl[key] = lazy(console[key].bind(console))
-    })
-  return {
-    get: block(get),
-    writeFile: block(writeFile),
-    mkdir: block(mkdir),
-    console: csl
-  }
-}, fs.readFileSync(__dirname + '/octocats.js', 'utf8'), '/example/octocats.js').done()
+execute(fs.readFileSync(__dirname + '/octocats.js', 'utf8'), {
+  get: get,
+  writeFile: writeFile,
+  mkdir: mkdir,
+  console: console
+}, '/example/octocats.js').done()
