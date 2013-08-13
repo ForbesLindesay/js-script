@@ -3,7 +3,7 @@
 try {
   mkdir('output')
 } catch (ex) {
-  console.warn('overwriting file')
+  console.warn('overwriting files')
 }
 var url = 'http://octodex.github.com/'
 var html = get(url).toString()

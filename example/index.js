@@ -5,12 +5,15 @@ var hyperquest = require('hyperquest')
 var execute = require('../')
 
 function get(url) {
+  console.log('==get==')
   return barrage(hyperquest(url)).buffer('buffer')
 }
-function writeFile(path, data, callback) {
+function writeFile(path, data) {
+  console.log('==write==')
   return Promise.denodeify(fs.writeFile)(__dirname + '/' + path, data)
 }
-function mkdir(path, callback) {
+function mkdir(path) {
+  console.log('==mkdir==')
   return Promise.denodeify(fs.mkdir)(__dirname + '/' + path)
 }
 execute(fs.readFileSync(__dirname + '/octocats.js', 'utf8'), {
