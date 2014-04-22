@@ -2,9 +2,9 @@
 
 Allow asynchronous APIs to be scripted using pure synchronous JavaScript.
 
-[![Build Status](https://travis-ci.org/ForbesLindesay/js-script.png?branch=master)](https://travis-ci.org/ForbesLindesay/js-script)
-[![Dependency Status](https://gemnasium.com/ForbesLindesay/js-script.png)](https://gemnasium.com/ForbesLindesay/js-script)
-[![NPM version](https://badge.fury.io/js/js-script.png)](http://badge.fury.io/js/js-script)
+[![Build Status](https://img.shields.io/travis/ForbesLindesay/js-script/master.svg)](https://travis-ci.org/ForbesLindesay/js-script)
+[![Dependency Status](https://img.shields.io/gemnasium/ForbesLindesay/js-script.svg)](https://gemnasium.com/ForbesLindesay/js-script)
+[![NPM version](https://img.shields.io/npm/v/js-script.svg)](http://badge.fury.io/js/js-script)
 
 ## Installation
 
