@@ -3,8 +3,8 @@
 Allow asynchronous APIs to be scripted using pure synchronous JavaScript.
 
 [![Build Status](https://img.shields.io/travis/ForbesLindesay/js-script/master.svg)](https://travis-ci.org/ForbesLindesay/js-script)
-[![Dependency Status](https://img.shields.io/gemnasium/ForbesLindesay/js-script.svg)](https://gemnasium.com/ForbesLindesay/js-script)
-[![NPM version](https://img.shields.io/npm/v/js-script.svg)](http://badge.fury.io/js/js-script)
+[![Dependency Status](https://img.shields.io/david/ForbesLindesay/js-script.svg)](https://david-dm.org/ForbesLindesay/js-script)
+[![NPM version](https://img.shields.io/npm/v/js-script.svg)](https://www.npmjs.com/package/js-script)
 
 ## Installation
 
