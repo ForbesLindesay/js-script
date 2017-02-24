@@ -1,5 +1,7 @@
 # js-script
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/ForbesLindesay/js-script.svg)](https://greenkeeper.io/)
+
 Allow asynchronous APIs to be scripted using pure synchronous JavaScript.
 
 [![Build Status](https://img.shields.io/travis/ForbesLindesay/js-script/master.svg)](https://travis-ci.org/ForbesLindesay/js-script)
